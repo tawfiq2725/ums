@@ -1,0 +1,11 @@
+/* AdminFooter Styles */
+.admin-footer {
+    padding: 10px;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #555;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  

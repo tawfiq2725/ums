@@ -1,0 +1,59 @@
+.user-body {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  padding: 20px;
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+.profile-card {
+  background-color: white; /* White background for profile card */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center-align text */
+}
+
+.profile-image {
+  width: 150px; /* Fixed width for the image */
+  height: 150px; /* Fixed height for the image */
+  border-radius: 50%; /* Circular profile image */
+  margin-bottom: 15px; /* Space below image */
+}
+
+.user-name {
+  font-size: 24px; /* Size for user name */
+  margin-bottom: 10px; /* Space below user name */
+}
+
+.user-email,
+.user-phone {
+  font-size: 16px; /* Size for user details */
+}
+
+form {
+  margin-top: 20px; /* Space above form */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align form items */
+}
+
+input[type="file"] {
+  margin-bottom: 15px; /* Space below file input */
+  border: 1px solid #ccc; /* Light border */
+  padding: 10px; /* Padding around input */
+  border-radius: 5px; /* Rounded corners */
+}
+
+button {
+  background-color: #007BFF; /* Blue */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

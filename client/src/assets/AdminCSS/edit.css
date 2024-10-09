@@ -1,0 +1,57 @@
+/* EditUser Styles */
+.edit-user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+  max-width: 500px; /* Set a maximum width for the form */
+  margin: 20px auto; /* Center the container within its parent */
+}
+
+.edit-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.edit-user-form {
+  width: 100%; /* Allow the form to take full width */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form elements */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-field {
+  width: 100%; /* Full width input fields */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+}
+
+.submit-btn {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

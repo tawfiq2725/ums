@@ -1,0 +1,75 @@
+/* Login Styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+  max-width: 400px; /* Set a maximum width for the login form */
+  margin: 0 auto; /* Center the container within its parent */
+  position: relative; /* To contain the Toasts */
+}
+
+.login-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  width: 100%; /* Allow the form to take full width */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form elements */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%; /* Full width input fields */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-btn {
+  padding: 10px 15px;
+  background-color: #007BFF; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Additional styles for the signup link */
+.signup-link {
+  margin-top: 20px; /* Space above the signup section */
+  text-align: center;
+}
+
+.signup-link span {
+  margin-right: 5px; /* Space between text and the link */
+}
+
+.signup-btn {
+  color: #007BFF; /* Blue text for signup link */
+  text-decoration: none; /* Remove underline from the link */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.error-text{
+  color: red;
+}
