@@ -12,16 +12,16 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8001;
 
-app.use(express.static('public'))
+app.use(express.static("public"));
 
 // Body parser middleware
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cookieParser())
+app.use(cookieParser());
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:8000");
+  res.header("Access-Control-Allow-Origin", "http://localhost:8001");
   res.header("Access-Control-Allow-Credentials", true);
   res.header(
     "Access-Control-Allow-Headers",
@@ -30,20 +30,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(
-  cors({
-    origin: [
-      "http://127.0.0.1:5173",
-      "http://localhost:5173",
-      "http://localhost:8000",
-    ],
-    methods: ["GET", "PUT", "POST", "PATCH", "DELETE"],
-    credentials: true,
-  })
-);
+app.use(cors());
 
-app.use("/user",userRouter);
-app.use("/admin", adminRouter)
+app.use("/user", userRouter);
+app.use("/admin", adminRouter);
 
 app.listen(PORT, (err) => {
   if (err) throw err;

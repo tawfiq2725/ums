@@ -1,16 +1,16 @@
-import React from 'react';
-import "../../assets/AdminCSS/adminLogin.css"
-import { useForm } from 'react-hook-form';
-import axios from 'axios';
-import { BACKEND_URL } from '../../Util/Config';
-import { useDispatch } from 'react-redux';
-import { loginAdmin } from '../Redux/adminSlice';
-import { useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import React from "react";
+import "../../assets/AdminCSS/adminLogin.css";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { BACKEND_URL } from "../../Util/Config";
+import { useDispatch } from "react-redux";
+import { loginAdmin } from "../Redux/adminSlice";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function AdminLogin() {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -20,8 +20,9 @@ function AdminLogin() {
 
   const formSubmit = async (data) => {
     try {
-
-      const response = await axios.post( `${BACKEND_URL}/admin/login`,JSON.stringify(data),
+      const response = await axios.post(
+        `${BACKEND_URL}/admin/login`,
+        JSON.stringify(data),
         {
           headers: {
             "Content-Type": "application/json",
@@ -29,11 +30,11 @@ function AdminLogin() {
         }
       );
 
-      if(response.data?.success){
-        console.log('res: ', response.data)
+      if (response.data?.success) {
+        console.log("res: ", response.data);
         localStorage.setItem("adminJWT", response?.data?.adminJWT);
 
-        dispatch(loginAdmin())
+        dispatch(loginAdmin());
 
         setTimeout(() => navigate("/admin/dashboard"), 200);
       } else {
@@ -45,7 +46,6 @@ function AdminLogin() {
           confirmButtonText: "Try Again",
         });
       }
-
     } catch (error) {
       console.log(error.message);
 
@@ -58,7 +58,7 @@ function AdminLogin() {
         confirmButtonText: "Okay",
       });
     }
-  }
+  };
 
   return (
     <div className="admin-login-container">
@@ -72,11 +72,11 @@ function AdminLogin() {
             name="email"
             id="email"
             placeholder="Enter your email"
-            {... register("email", {required: true})}
+            {...register("email", { required: true })}
           />
           {errors.email && (
-              <span className='error-text'>Email is required</span>
-            )}
+            <span className="error-text">Email is required</span>
+          )}
         </div>
 
         {/* Password */}
@@ -87,15 +87,17 @@ function AdminLogin() {
             name="password"
             id="password"
             placeholder="Enter your password"
-            {... register("password", {required: true})}
+            {...register("password", { required: true })}
           />
           {errors.password && (
-              <span className='error-text'>Password is required</span>
-            )}
+            <span className="error-text">Password is required</span>
+          )}
         </div>
 
         {/* Submit Button */}
-        <button type="submit" className="login-btn">Login</button>
+        <button type="submit" className="login-btn">
+          Login
+        </button>
       </form>
     </div>
   );
